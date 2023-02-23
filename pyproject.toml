@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canparse"
+version = "0.1.0"
+description = "Common functions used in parsing CAN logs created by the python-can package."
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE"}
+keywords = ["can-bus", "python"]
+authors = [
+  {email = "jack-c-cook@protonmail.com"}
+]
+maintainers = [
+  {name = "Jack C. Cook", email = "jack-c-cook@protonmail.com"}
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python"
+]
+
+dependencies = [
+  "python-can",
+  "cantools",
+]
+
+[project.urls]
+repository = "https://github.com/j-c-cook/CANParse"
+
+[project.entry-points."canparse"]
+parse = "canparse:parse"
